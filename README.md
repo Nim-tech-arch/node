@@ -1,25 +1,33 @@
-# Manual Node Server
+# Express Project API
 
-A simple Node.js server with no frameworks.
+A simple Express server exposing an in-memory projects API.
+
+## Installed dependencies
+
+- `express`
 
 ## Available routes
 
-- `GET /`
-  - Returns an HTML page.
 - `GET /api/projects`
   - Returns a JSON array of 4 Python projects.
-- `POST /api/contact`
-  - Logs the request body to the console.
+- `POST /api/projects`
+  - Adds a new project to the in-memory array.
+  - Request body should include `name` and `description`, optionally `stack`.
+- `DELETE /api/projects/:id`
+  - Removes a project by numeric `id`.
+- `GET /`
+  - Returns a small HTML landing page.
 - Any other route returns `404 Not Found`.
 
 ## Run
 
 ```bash
 cd c:\Users\USER\OneDrive\Desktop\REPOS\WEB-FOUNDATIONS\node
+npm install
 npm start
 ```
 
 ## Notes
 
-- Built with the built-in `http` module.
-- No frameworks used.
+- Uses Express middleware for logging and JSON parsing.
+- Data is stored in memory, so it resets when the server restarts.
