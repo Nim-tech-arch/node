@@ -1,0 +1,12 @@
+{
+  "name": "manual-node-server",
+  "version": "1.0.0",
+  "description": "A manual Node.js server with basic routes and no frameworks.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
